@@ -1,0 +1,189 @@
+/* Less Variables */
+
+//fonts
+@bodyfont: @body_font, -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+@menufont: @menu_font, -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+@headingfont: @heading_font, -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+@iconfont: 'icon-dukamarket';
+
+// Defined colors
+@darkcolor: #2f3237;
+@greycolor: #999;
+@lightgreycolor: #b2b2b4;
+
+@bkgwidget: #222222;
+@bgnavmenu: #222222;
+@bordernav: #363636;
+@bgsubmenu: #fff;
+@bkgcard: #ff7d1f;
+@inputtext: #f5f5f5;
+@lightcolor: #fff;
+@navmobilebg: #eee;
+
+
+// Button
+@button_border_radius: 5px;
+// Button active
+// Main font (Depend on design)
+ @_icon_custom_font: 'icon-dukamarket';
+.icon_custom_font(
+  @_icon_custom_font_content: "",
+  @_icon_custom_font_color:  #9999B8,
+  @_icon_custon_font_size: @text_size,
+  @_icon_custon_line_height: 1,
+){
+    &{
+        content: @_icon_custom_font_content;
+        font-family: @_icon_custom_font;
+        font-size: @_icon_custon_font_size;
+        color: @_icon_custom_font_color;
+        line-height: @_icon_custon_line_height;
+    }
+}
+
+// Change product icon
+@wishlist-icon: "\e99e";
+@compare-icon: "\e9a8";
+@quickview-icon: "\e980";
+@add-cart-icon: "\e9f5";
+
+@icon-next: "\e606";
+@icon-prev: "\e605";
+
+// Product variables
+// Space value
+@margin-gobal-value: 85px; // Spacing between element
+@margin-mobile-gobal-value: 45px;
+
+@margin-gobal-position: bottom;
+.margin-gobal-value(
+@_margin_gobal_position: @margin-gobal-position,
+) when (@_margin_gobal_position = bottom) {
+  // spacing on larger screen
+  @media screen and (min-width: 992px) {
+    margin-bottom: @margin-gobal-value;
+  }
+  @media screen and (max-width: 991px) {
+    margin-bottom: @margin-mobile-gobal-value;
+  }
+}
+.margin-gobal-value(
+@_margin_gobal_position: @margin-gobal-position,
+) when (@_margin_gobal_position = top) {
+  // spacing on larger screen
+  @media screen and (min-width: 992px) {
+    margin-top: @margin-gobal-value;
+  }
+  @media screen and (max-width: 991px) {
+    margin-top: @margin-mobile-gobal-value;
+  }
+}
+
+// Section title style
+@title_gobal_size: 28px;
+
+:root{
+  --color-primary: @primary_color;
+  --base-line-height: 1.75;
+  --color-body-text: @text_color;
+  --font-body: @bodyfont;
+  --font-weight-body: @text_weight;
+  --font-base-size: @text_size;
+  --color-heading-text:  @heading_color;
+  --heading-font-weight: @heading_font_weight;
+  --heading-font-family:  @headingfont;
+  --link_color: @link_color;
+
+  --top-bar-background: @top_bar;
+  --topbar-color-text: @topbar_color;
+
+  --header-background-color: @header_bg_color;
+  --header-text-color: @header_color;
+  --sticky-bg: @sticky_bg;
+  --sticky-color: @sticky_color;
+  --color-menu-background: #000000;
+
+  --container-width: 1440px;
+  --fluid-container-width: 1620px;
+  --offset-x: 50px;
+
+  --color-menu-text:@menu_color;
+  --font-memu: @menufont;
+  --menu-font-size:@menu_font_size;
+  --padding-item-menu: 25px 15px;
+
+  --page-title-display: block !important;
+
+  --sidebar-background-color: #fff;
+  --sidebar-radius: 10px;
+
+  --product-title-color: #2D2A6E;
+  --product-title-size:16px;
+
+  --button-background-color: @button_background_color;
+  --button-background-color-hover: #859A00;
+  --button-color: @button_color;
+
+  --price-color: @price_color;
+  --old-price-color: @old_price_color;
+
+  --text-gray-00: #79819C;
+  --border-base-color: #EBEFF4;
+  --text-input-color: #ACAFB7;
+
+  --breadcrumbs-text-color:  #79819C;
+  --rate-color: @rate_color;
+
+  
+
+}
+
+@media (min-width: 1400px){
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+      max-width: var(--container-width);
+  }
+}
+
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    // max-width: calc(~'(var(--fluid-container-width, 1620px) + var(--offset-x)*2)');
+    max-width: 100%;
+    padding-left: var(--offset-x);
+    padding-right: var(--offset-x);
+    width: 100%;
+}
+@media (max-width: 992px){
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 100%;
+  }
+  .container-fluid{
+    --offset-x: 15px;
+  }
+}
+.-mx-4{
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+.flex-grow-2{
+  flex-grow: 2;
+}
+.h-80{
+  min-height: 80px;
+}
+.h-100{
+  min-height: 100px;
+}
+.h-40{
+  min-height: 40px;
+}

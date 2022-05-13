@@ -1,0 +1,135 @@
+// Default test
+.orfarm-default-body{
+	background-color: #fff;
+	&.single{
+		.post{
+			.post-wrapper{
+				border: 0;
+			}
+		}
+	}
+	select{
+		margin-bottom: 10px;
+	}
+	.wp-block-calendar{
+		margin-bottom: 10px;
+	}
+	.single-post-content {
+		.post .post-wrapper .entry-content{
+			p + .wp-block-cover.has-background-dim-60.has-background-dim{
+				margin-top: 20px;
+				margin-bottom: 0;
+			}
+		}
+		.comment-respond{
+			margin-top: 0;
+		}
+	}
+	.blog-page.big-image-layout .pagination-center{
+		margin-top: 0;
+	}
+}
+.orfarm-default-body{
+	h1, .h1, h2, .h2, h3, .h3{
+	    margin-top: 15px;
+	    clear: both;
+	}
+	#gallery-2 .gallery-item{
+		text-align: left;
+	}
+}
+.wp-block-columns.alignfull, .alignfull:not(.has-background) .wp-block-columns{
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.wp-block-calendar{
+	.wp-calendar-nav{
+		a{
+			color: var(--color-primary); 
+		}
+	}
+}
+.has-avatars .wp-block-latest-comments__comment{
+	min-height: unset;
+	.wp-block-latest-comments__comment-excerpt{
+		margin-top: 10px;
+	}
+}
+/* Latest Comments */
+.home.blog{
+	.main-container{
+		margin-top: 80px;
+	}
+}
+.wp-block-latest-comments__comment-meta a {
+	box-shadow: none;
+	font-weight: var(--heading-font-weight);
+}
+
+.wp-block-latest-comments__comment-date {
+	color: #686868;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	line-height: 1.6153846154;
+}
+
+.wp-block-latest-comments .wp-block-latest-comments__comment {
+	margin: 30px 0;
+}
+
+.wp-block-latest-comments__comment-excerpt p:last-child {
+	margin-bottom: 0;
+}
+.wp-block-search .wp-block-search__input{
+	border: 1px solid var(--border-base-color);
+	background-color: transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+    -ms-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+}
+div[style="background-color:#d8f6ec"]{
+	.wp-block-button{
+		margin-bottom: 20px;
+	}
+}
+.entry-content{
+	.page-links{
+		display: flex;
+		align-items: center;
+		grid-gap: 0 15px;
+		margin-top: 10px;
+	}
+}
+.comments-area{
+	.media-list{
+		.comment{
+			&:not(:last-of-type){
+				.comment-respond{
+					margin-bottom: 80px;
+					@media screen and (max-width: 991px) {
+						margin-bottom: 55px;
+					}
+				}
+			}
+		}
+	}
+}
+footer{
+	p{
+		margin: 0;
+	}
+}
+.wp-block-button.is-style-squared .wp-block-button__link{
+	border-radius: 0;
+}
+article#post-1785 .entry-content .wp-block-button:nth-of-type(3) .wp-block-button__link{
+	border-radius: 30px;
+}
+.wp-block-image::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+.orfarm-default-body .single-post-content .post .post-info .entry-content{
+	margin-top: 30px;
+}

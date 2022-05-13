@@ -1,0 +1,343 @@
+/* Responsive style sheet */
+.visible-xs {
+	display: none;
+	@media screen and (max-width: 992px) {
+		display: block;
+	}
+}
+#secondary {
+	position: relative;
+
+	.sidebar-toggle {
+		display: none;
+		position: absolute;
+		background: @darkcolor;
+		color: @lightcolor;
+		padding: 10px 18px;
+		font-size: 18px;
+		cursor: pointer;
+		top: 0px;
+		left: 15px;
+		right: 15px;
+
+		&:after {
+			color: @lightcolor;
+			content: '\f105';
+			position: absolute;
+			right: 20px;
+			line-height: 38px;
+			font-size: 16px;
+			top: 0;
+		}
+	}
+
+	&.opening {
+		.sidebar-toggle {
+			&:after {
+				content: '\f107';
+			}
+		}
+	}
+}
+@media screen and (max-width: 1199px) {
+	.blog-page.blog-column-1.side-by-side-layout
+		article[id*='post-']
+		.post-wrapper
+		.post-thumbnail {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.blog-page.blog-column-1.side-by-side-layout
+		article[id*='post-']
+		.post-wrapper
+		.post-info {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: 30px 0 0;
+	}
+	.toolbar {
+		.woocommerce-result-count {
+			display: none;
+		}
+		.shop-filters .filter-content .filter-content-inner {
+			grid-template-columns: auto auto auto;
+		}
+	}
+}
+@media screen and (max-width: 992px) {
+	.section-element {
+		margin: 0 0 2em;
+	}
+	.woocommerce div.main-wrapper .woocommerce-tabs .panel #reviews {
+		#comments,
+		#review_form_wrapper {
+			width: 100%;
+			padding: 0;
+			border: 0;
+
+			#review_form #commentform input {
+				max-width: 100%;
+			}
+		}
+	}
+
+	#secondary {
+		clear: both;
+
+		.sidebar-toggle {
+			display: block;
+		}
+	}
+	#main-content .wpb_revslider_element {
+		margin-bottom: 30px;
+	}
+	.shop-products.list-view .add_to_cart_inline a.button {
+		min-width: auto !important;
+	}
+
+	.lionthemes-featured-categories .inner-content {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (max-width: 768px) {
+	.main-wrapper .site-content .woocommerce table.shop_table {
+		thead tr th {
+			text-transform: capitalize;
+			font-size: 12px;
+		}
+		tr{
+			margin-bottom: 15px;
+		    padding: 0 10px;
+		}
+	}	
+}
+@media screen and (max-width: 767px) {
+	.lionthemes-featured-categories .inner-content {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.section-element.corporate-about {
+		grid-template-columns: repeat(2, auto);
+	}
+	.vc_tta-left-banner {
+		display: none;
+	}
+	.single-post .comments-area .info-wrapper {
+		width: 100%;
+		margin-right: 0;
+	}
+	.feature-text .wpb_column {
+		border: 0;
+	}
+	#popup_onload .popup-content-wrapper {
+		height: 60vh;
+	}
+	.myaccount-content .col2-set > div {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: 0;
+		margin: 20px 0 0;
+	}
+	.toolbar {
+		.shop-filters .filter-content .filter-content-inner {
+			grid-template-columns: auto auto;
+		}
+	}
+	.product-template-default .elementor-widget-image-box .elementor-image-box-img{
+	    margin-bottom: 20px !important;
+	}
+	
+}
+
+@media screen and (max-width: 550px) {
+	.blog-page.blog-column-1.side-by-side-layout
+		article[id*='post-']
+		.post-wrapper {
+		.post-thumbnail {
+			width: 100%;
+			float: none;
+		}
+
+		.post-info {
+			width: 100%;
+			float: none;
+			padding: 30px 0 0;
+		}
+	}
+	.section-element.corporate-about {
+		grid-template-columns: repeat(1, auto);
+		.wpb_column {
+			border: 0;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.widget-social .social-icons {
+		text-align: left;
+		margin: 10px 0 0;
+	}
+	.cart-side-content .cart-widget-content {
+		max-width: calc(~'(100% - 30px)');
+	}
+	.deal-layout .shop-products .products-countdown{
+	    flex-direction: column;
+	    .list-col4{
+			flex: 0 0 100%;
+			max-width: 100%;
+	    }
+	}
+	#popup-style-apply{
+		background-image: none !important;
+	}
+}
+@media screen and (max-width: 479px) {
+	.comments-area .media-list .children {
+		width: 100%;
+		margin-left: 0 !important;
+		padding-left: 0;
+	}
+
+	.single-post .comments-area .info-wrapper {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.blog-page.blog-one-column-left .post .post-wrapper .post-info,
+	.blog-page.blog-one-column-right .post .post-wrapper .post-info,
+	.blog-page.blog-one-column .post .post-wrapper .post-info,
+	.blog-page.blog-one-column-left .post .post-wrapper .post-thumbnail,
+	.blog-page.blog-one-column-right .post .post-wrapper .post-thumbnail,
+	.blog-page.blog-one-column .post .post-wrapper .post-thumbnail {
+		width: 100%;
+	}
+
+	.woocommerce form .form-row-first,
+	.woocommerce form .form-row-last,
+	.woocommerce-page form .form-row-first,
+	.woocommerce-page form .form-row-last {
+		width: 100%;
+	}
+	.section-element .contact-7 .wpcf7 {
+		.wpcf7-form p:nth-child(2),
+		.wpcf7-form p:nth-child(3) {
+			max-width: 100%;
+			margin-right: 0;
+		}
+	}
+
+	.widget_wysija_cont .wysija-paragraph {
+		width: 100%;
+	}
+
+	.product_list_widget .item-product-widget {
+		width: 100%;
+	}
+
+	.woocommerce {
+		div.main-wrapper {
+			.product-view {
+				.f-image,
+				.r-product-info {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.categories-tabs-widget .category-tab-actions li {
+		width: auto;
+	}
+}
+
+// fix mobile footer
+@media screen and (max-width: 1199px) {
+	.footer-v12{
+		.elementor-container{
+			> div:last-child{
+				.elementor-widget-wrap{
+					padding-left: 15px;
+					border: 0;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	.footer-v11{
+		.elementor-inner-section{
+			.elementor-container{
+				> div{
+					width: 50% !important;
+					.elementor-element{
+						background: #393882;
+						border-radius: 3px;
+						padding: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1024px) and (min-width: 576px){
+	.footer-v12{
+		.elementor-container{
+			> div{
+				width: 50% !important;
+				
+			}
+			> div:nth-child(1),> div:nth-child(2){
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	.footer-v13{
+		.elementor-container{
+			> div{
+				width: 100% !important;
+				padding: 0 15px;
+				.elementor-widget-wrap,
+				.elementor-element{
+					text-align: center;
+				}
+				
+			}
+		}
+		.elementor-widget:not(:last-child){
+			margin-bottom: 10px;
+		}
+	}
+}
+@media screen and (max-width: 576px) {
+	.footer-v13{
+		padding-bottom: 160px !important;
+	}
+	.footer-v12{	
+		.elementor-container{
+			> div{
+				width: 100% !important;
+				
+			}
+			> div:not(:last-child){
+				margin-bottom: 40px;
+			}
+		}
+		.elementor-widget:not(:last-child){
+			margin-bottom: 10px;
+		}
+		&.hf{
+			.elementor-container{
+				> div{
+					width: 50% !important;
+					
+				}
+				> div:not(:last-child){
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+	.footer-v12:not(.pa){
+		padding-bottom: 60px !important;
+		padding-top: 40px !important;
+	}
+}
