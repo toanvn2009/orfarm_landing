@@ -601,9 +601,9 @@ if (!class_exists('Orfarm_Theme_Config')) {
                         'subtitle'      => esc_html__('Menu font.', 'orfarm'),
                         'default'       => array(
 							'color'         => '#2D2A6E',
-                            'font-weight'    => '500',
+                            'font-weight'    => '600',
                             'font-family'   => 'Jost',
-							'font-size'     => '16px',
+							'font-size'     => '13px',
                             'google'        => true,
 						),
                     ),

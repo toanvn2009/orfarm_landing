@@ -36,6 +36,7 @@
 .mobile-navigation{	
 	--color-heading-text: #fff;
 	--heading-font-weight: 500;
+	--menu-font-size: 16px;
 	left: 0;
 	top: 0;
 	margin: 0;
@@ -286,9 +287,9 @@
 		}
 	}
 	.search-form-container{
-		margin-bottom: 20px;
 		.search-content-popup{
 			text-align: center;
+			display: none;
 			.close-popup,
 			.orfarm-autocomplete-search-loading,
 			.orfarm-autocomplete-search-results{
@@ -346,7 +347,8 @@
 	.tab{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		margin-bottom: 15px;	
+		margin-bottom: 15px;
+		display: none;	
 		button{
 			border: 0;
 			padding: 10px 15px;
